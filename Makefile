@@ -3,8 +3,9 @@ all: fib fibcmd fibgmp.so
 fibcmd: fibcmd.o fibgmp.o
 	$(CC) -o fibcmd fibcmd.o fibgmp.o -lgmp
 
-fibgmp.so: fibgmp.o
-	$(CC) -shared -o fibgmp.so fibgmp.o -lgmp
+fibgmp.so: fibgmp.c
+	rm -f fibgmp.o
+	$(CC) -fPIC -shared -o fibgmp.so fibgmp.c -lgmp
 
 test: all
 	@./fib 10 | grep 89 > /dev/null || echo "*** FAIL"

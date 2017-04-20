@@ -11,4 +11,4 @@ PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 
 test: all
-	@psql -c "create extension if not exists pgfib; select fib(10);" | grep ' 89' > /dev/null || echo "*** FAIL"
+	@psql -c "CREATE OR REPLACE FUNCTION fib(INT) RETURNS TEXT AS '$(shell pwd)/pgfib.so', 'pgfib' LANGUAGE C STRICT; SELECT FIB(10);" | grep ' 89' > /dev/null || echo "*** FAIL"
