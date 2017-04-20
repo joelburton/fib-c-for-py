@@ -1,0 +1,5 @@
+ctypes example for fib.
+
+This has a module, 'fib', which loads the real C library via ctypes.
+Your Python code doesn't have to know this --- it just treats the 'fib'
+mdoule as a normal module.

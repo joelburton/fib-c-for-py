@@ -1,0 +1,5 @@
+Python extension library for Fibonacci.
+
+This builds an "extension library" -- a module that you can directly
+import in your Python scripts, which wraps the underlying C code.
+This is the classic way to use C libraries in Python.

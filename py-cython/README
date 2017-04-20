@@ -1,0 +1,8 @@
+Cython version of Fibonacci.
+
+This turns "fib.pyx" into a compiled C version.
+If you add C type information to your PYX file, this
+can have *dramatic* speedups -- close to a native C
+version!
+
+

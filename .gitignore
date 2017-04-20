@@ -1,0 +1,9 @@
+*.o
+*.so
+*.pyc
+build/
+
+/fib
+/fibcmd
+/py-cython/fib.c
+

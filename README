@@ -1,0 +1,39 @@
+Fibonacci C demonstration
+
+Joel Burton <joel@joelburton.com>
+
+
+fib.c
+    Simple C fib(n) function
+
+fibgmp.c
+    fib() and fibfast(), using gmp for infinite-precision math
+
+fibcmd.c
+    Command-line program to use fibgmp.c
+
+py-plain/
+    Ordinary Python implementation of fib()
+
+py-cython/
+    Cython version of fib()
+
+py-ctypes/
+    Python fib library that uses C code via ctypes
+
+py-ext/
+    Python fib library that wraps our C code with standard extension library
+
+postgres/
+    PostgreSQL user defined function for fib()
+
+
+
+You need some libraries to use this. Under Ubuntu Linux:
+
+    sudo apt install python libpython-dev
+    sudo apt install libgmp-dev libgmp10
+    sudo apt install cython
+    sudo apt install postgresql postgresql-client postgresql-server-dev-9.5
+    
+

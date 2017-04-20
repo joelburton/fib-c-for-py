@@ -1,0 +1,30 @@
+PostgreSQL pgfib extension: adds fast fibonacci function.
+
+To use:
+
+    make
+    sudo make install
+
+and then, in PostgreSQL data where you want to use extension:
+
+    CREATE EXTENSION pgfib;
+
+test with:
+
+    SELECT fib(100);
+
+
+
+What's here:
+
+Makefile
+    Makefile to build library; uses PostgreSQL's `pg_xs` building system
+
+pgfib--1.0.sql
+    SQL that is run on extension install to link functions to server
+
+pgfib.c
+    Source code for function
+
+pgfib.control
+    Control file that describes components of extension
