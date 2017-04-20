@@ -12,4 +12,9 @@ int main(int argc, char *argv[]) {
 
     char *fast_out = fibfast(count);
     printf("fast: %s\n", fast_out);
+
+    // tidy: release memory used by out and fast_out
+    // (nice but not required, at program end, all memory is released)
+    free(out);
+    free(fast_out);
 }
