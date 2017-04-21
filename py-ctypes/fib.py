@@ -12,4 +12,7 @@ fib.restype = ctypes.c_char_p
 fast.restype = ctypes.c_char_p
 
 
+if __name__ == "__main__":
+    from sys import argv
+    print fib(int(argv[1]))
 

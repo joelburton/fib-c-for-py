@@ -1,3 +1,5 @@
+CFLAGS = -g
+
 all: fib fibcmd fibgmp.so
 
 fibgmp.o: fibgmp.c
