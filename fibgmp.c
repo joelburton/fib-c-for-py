@@ -6,7 +6,7 @@
 
 /** Iterative fibonacci, using gmp for huge numbers. */
 
-extern char *fib(int count) {
+char *fib(int count) {
     char *cout;   // string result we'll return
     mpz_t a, b, out;
     mpz_inits(a, b, out, NULL);
@@ -31,7 +31,7 @@ extern char *fib(int count) {
 
 /** Fast version of fib -- uses semi-closed form from gmp */
 
-extern char *fibfast(int count) {
+char *fibfast(int count) {
     char *cout;   // string result we'll return
     mpz_t out;
     mpz_init(out);
