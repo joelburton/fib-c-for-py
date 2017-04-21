@@ -21,8 +21,6 @@ int main(int argc, char *argv[]) {
     double speed2 = (time3 - time2) / (double) CLOCKS_PER_SEC;
     printf("speeds: %.5lf versus %.5lfs\n", speed1, speed2);
 
-    // tidy: release memory used by out and fast_out
-    // (nice but not required, at program end, all memory is released)
-    free(out);
-    free(fast_out);
+    free(out);       // tidy: release memory used by our
+    free(fast_out);  //   dynamically-allocated strings
 }
